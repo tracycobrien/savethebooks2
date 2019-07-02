@@ -1,3 +1,17 @@
-* {
-    background-color: red;
+*
+.jumbotron {
+    background-image: url(./library2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px; 
+    width: 100%;
+    padding-top: 10; 
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+
+    
 }
+
+

@@ -7,10 +7,10 @@ export default class Welcome extends Component {
   render() {
     return (
       <Jumbotron>
-        <h1>Hello, world!</h1>
+        <h1>Please Enter!</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling
-          extra attention to featured content or information.
+          This is an app that allow you to access a list of books I have already read! I also have a wish 
+          list of books I would love to own. Thank you for visiting. 
         </p>
         <p>
           <Button variant="primary">Learn more</Button>
