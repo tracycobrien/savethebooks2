@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
-import Button, {ButtonProps} from "material-ui/Button";
+// import Button, {ButtonProps} from "material-ui/Button";
 
 
 
@@ -16,8 +16,9 @@ export default class Welcome extends Component {
           list of books I would love to own. Thank you for visiting. 
         </p>
         <p>
-          <Button variant="primary">Learn more</Button>
-          
+        
+          <Button variant="primary" href="/books" >Learn more</Button>
+        
         </p>
       </Jumbotron>
     )

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
+import { Jumbotron, Button } from 'react-bootstrap';
+// import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+
 
 class Books extends Component {
   state = {
@@ -107,8 +109,9 @@ class Books extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
+            <Button variant="primary" href="/bookshelf" >Bookshelf</Button>
           </Col>
         </Row>
       </Container>

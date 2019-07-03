@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import { Jumbotron, Button } from 'react-bootstrap';
 // import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+// import Jumbotron from "../components/Jumbotron";
 
-export default class Welcome extends Component {
+export default class Bookshelf extends Component {
     state = {}
-  
+
     render() {
       return (
         <Jumbotron>
@@ -13,8 +14,7 @@ export default class Welcome extends Component {
             Lorem Ipsum
           </p>
           <p>
-            <Button variant="primary">Learn more</Button>
-            
+            <Button variant="primary" href="/books">Learn more</Button>
           </p>
         </Jumbotron>
       )
