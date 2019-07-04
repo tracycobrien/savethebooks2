@@ -7,6 +7,18 @@ import NoMatch from "./pages/NoMatch";
 import Welcome from "./pages/Welcome";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer/Footer"
+import axios from "axios"
+
+
+// https://www.googleapis.com/books/v1/volumes?q=isbn:<your_isbn_here>
+
+axios.get("https://www.googleapis.com/books/v1/volumes/s1gVAAAAYAAJ")
+.then(res=>{
+  console.log(res)
+})
+.catch(err=>{
+  console.log("===================",err)
+})
 
 function App() {
   return (
