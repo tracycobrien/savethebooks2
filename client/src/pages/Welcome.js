@@ -17,7 +17,7 @@ export default class Welcome extends Component {
         </p>
         <p>
         
-          <Button variant="primary" href="/books" >Learn more</Button>
+          <Button variant="primary" href="/books" >Enter</Button>
         
         </p>
       </Jumbotron>

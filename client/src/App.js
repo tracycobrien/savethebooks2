@@ -6,6 +6,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Welcome from "./pages/Welcome";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/bookshelf" component={Bookshelf} />
           <Route component={NoMatch} />
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );

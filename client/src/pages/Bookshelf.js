@@ -8,13 +8,13 @@ export default class Bookshelf extends Component {
 
     render() {
       return (
-        <Jumbotron>
+        <Jumbotron className={"background3"}>
           <h1>Please Scan a Book!</h1>
           <p>
             Lorem Ipsum
           </p>
           <p>
-            <Button variant="primary" href="/books">Learn more</Button>
+            <Button variant="primary" href="/">Home</Button>
           </p>
         </Jumbotron>
       )

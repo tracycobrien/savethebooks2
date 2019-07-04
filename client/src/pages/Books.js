@@ -61,7 +61,7 @@ class Books extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
+            <Jumbotron className={"background2"}>
               <h1>Books I Want to Read</h1>
             </Jumbotron>
             <form>
@@ -92,7 +92,7 @@ class Books extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
+            <Jumbotron className={"background1"}>
               <h1>Books On My Wish List</h1>
             </Jumbotron>
             {this.state.books.length ? (
