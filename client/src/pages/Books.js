@@ -62,7 +62,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron className={"background2"}>
-              <h1>Books I Want to Read</h1>
+              <h1>Add Books to My Wish List</h1>
             </Jumbotron>
             <form>
               <Input

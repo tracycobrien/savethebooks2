@@ -10,10 +10,11 @@ mongoose.connect(
 
 const bookSeed = [
   {
-    title: "The Dead Zone",
-    author: "Stephen King",
+    title: "Death By Darjeeling",
+    author: "Laura Childs",
     synopsis:
-      "A number-one national best seller about a man who wakes up from a five-year coma able to see people's futures and the terrible fate awaiting mankind in The Dead Zone - a \"compulsive page-turner\" (The Atlanta Journal-Constitution). Johnny Smith awakens from a five-year coma after his car accident and discovers that he can see people's futures and pasts when he touches them. Many consider his talent a gift; Johnny feels cursed. His fiancée married another man during his coma, and people clamor for him to solve their problems. When Johnny has a disturbing vision after he shakes the hand of an ambitious and amoral politician, he must decide if he should take drastic action to change the future. The Dead Zone is a \"faultlessly paced...continuously engrossing\" (Los Angeles Times) novel of second sight.",
+    "Ordinarily, Charleston\'s Indigo Tea Shop is an oasis of calm. But when tea shop owner, Theodosia Browning, caters the annual Lamplighter Tour of historic homes, one of the patrons turns up dead. Never mind that it\'s Hughes Barron, a slightly scurrilous real estate developer. Theodosia\'s reputation is suddenly on the line. Aided by her friends and fellow tea shop entrepreneurs, Theo sets about to unravel the mystery of the deadly Darjeeling and encounters a number of likely suspects. Tanner Joseph, the fiery environmentalist, held a grudge against the developer for his misuse of land. Timothy Neville, the octogenarian major domo for the Heritage Society, opposed Hughes Barron\'s election to the board. And Barron\'s unsavory partner might very well profit from a cleverly written buy-sell agreement!",
+
     date: new Date(Date.now())
   },
   {
@@ -24,17 +25,17 @@ const bookSeed = [
     date: new Date(Date.now())
   },
   {
-    title: "The Catcher in the Rye",
-    author: "J.D. Salinger",
+    title: "Chamomile Mourning",
+    author: "Laura Childs",
     synopsis:
-      "The Catcher in the Rye is a 1951 novel by J. D. Salinger. A controversial novel originally published for adults, it has since become popular with adolescent readers for its themes of teenage angst and alienation. It has been translated into almost all of the world's major languages. Around 1 million copies are sold each year with total sales of more than 65 million books. The novel's protagonist Holden Caulfield has become an icon for teenage rebellion. The novel also deals with complex issues of innocence, identity, belonging, loss, and connection.",
+    "Spoleto Festival ushers in a two week explosion of music, art, theater, and dance for Charleston. But during the Heritage Society\'s first-ever Poet\'s Tea, Roger Crispin, the head of Charleston\'s staid auction house Crispin & Weller, ends up a hapless performance art victim.",
     date: new Date(Date.now())
   },
   {
-    title: "The Punch Escrow",
-    author: "Tal M. Klein",
+    title: "Girl on a Train",
+    author: "A J Waines",
     synopsis:
-      "It's the year 2147. Advancements in nanotechnology have enabled us to control aging. We’ve genetically engineered mosquitoes to feast on carbon fumes instead of blood, ending air pollution. And teleportation has become the ideal mode of transportation, offered exclusively by International Transport―the world’s most powerful corporation, in a world controlled by corporations. Joel Byram spends his days training artificial-intelligence engines to act more human and trying to salvage his deteriorating marriage. He’s pretty much an everyday twenty-second century guy with everyday problems―until he’s accidentally duplicated while teleporting. Now Joel must outsmart the shadowy organization that controls teleportation, outrun the religious sect out to destroy it, and find a way to get back to the woman he loves in a world that now has two of him.",
+    "A toddler is missing. Anna follows a mysterious trail of clues left by the anxious woman beside her on the train, who leapt suddenly to her death.",
     date: new Date(Date.now())
   },
   {
