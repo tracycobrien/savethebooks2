@@ -9,7 +9,7 @@ export default class Bookshelf extends Component {
     render() {
       return (
         <Jumbotron className={"background3"}>
-          <h1>Please Scan a Book!</h1>
+          <h1 className={"outline-text"}>Please Scan a Book!</h1>
           <p>
             Lorem Ipsum
           </p>
