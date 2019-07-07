@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes/api");
+const routes = require("./routes/api2");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 27018;
 const axios = require("axios")
 mongoose.set('useCreateIndex', true);
 
@@ -26,7 +26,8 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"),{ useNewUrlParser: true };
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/googlebooks';
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 // Start the API server
 app.listen(PORT, function() {
