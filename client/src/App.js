@@ -10,16 +10,13 @@ import Footer from "./components/Footer/Footer"
 import axios from "axios"
 import Quagga from 'quagga';
 
-
-// https://www.googleapis.com/books/v1/volumes?q=isbn:<your_isbn_here>
-
-// axios.get("https://www.googleapis.com/books/v1/volumes/s1gVAAAAYAAJ")
-// .then(res=>{
-//   console.log(res)
-// })
-// .catch(err=>{
-//   console.log("===================",err)
-// })
+axios.get("// https://www.googleapis.com/books/v1/volumes?q=isbn:9781338208740")
+.then(res=>{
+  console.log(res)
+})
+.catch(err=>{
+  console.log("===================",err)
+})
 
 class App extends Component {
   constructor(props) {
