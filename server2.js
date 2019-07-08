@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes/api2");
 const app = express();
 const PORT = process.env.PORT || 27018;
-const axios = require("axios")
+const axios = require("axios");
+const bodyParser = require('body-parser');
 mongoose.set('useCreateIndex', true);
 
 

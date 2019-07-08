@@ -1,14 +1,7 @@
-const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api");
-// const isbn = require ("node-isbn")
+const bookRoutes = require("./bookshelf");
 
-// API Routes
-router.use("/api", apiRoutes);
-
-// If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// Book routes
+router.use("/bookshelf", bookRoutes);
 
 module.exports = router;

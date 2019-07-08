@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+const mongoJoin = require("mongo-join-query");
 
 // This file empties the Books collection and inserts the books below
 
@@ -120,8 +121,16 @@ const bookSeed = [
     author: "Trevor Noah",
     synopsis:
       "Trevor Noah, one of the comedy world's fastest-rising stars and host of The Daily Show, tells his wild coming-of-age story during the twilight of apartheid in South Africa and the tumultuous days of freedom that followed. In this Audible Studios production, Noah provides something deeper than traditional memoirists: powerfully funny observations about how farcical political and social systems play out in our lives. \"Nelson Mandela once said, 'If you talk to a man in a language he understands, that goes to his head. If you talk to him in his language, that goes to his heart.' He was so right. When you make the effort to speak someone elses language, even if it's just basic phrases here and there, you are saying to them, 'I understand that you have a culture and identity that exists beyond me. I see you as a human being.'\" (Trevor Noah)\nAttuned to the power of language at a young age - as a means of acceptance and influence in a country divided, then subdivided, into groups at odds with one another - Noah's raw, personal journey becomes something extraordinary in audio: a true testament to the power of storytelling. With brutal honesty and piercing wit, he forgoes an ordinary reading and, instead, delivers something more intimate, sharing his story with the openness and candor of a close friend. His chameleon-like ability to mimic accents and dialects, to shift effortlessly between languages including English, Xhosa, and Zulu, and to embody characters throughout his childhood - his mother, his gran, his schoolmates, first crushes and infatuations - brings each memory to life in vivid detail. Hearing him directly, you're reminded of the gift inherent in telling one's story and having it heard; of connecting with another, and seeing them as a human being.\nThe stories Noah tells are by turns hilarious, bizarre, tender, dark, and poignant - subsisting on caterpillars during months of extreme poverty, making comically pitiful attempts at teenage romance in a color-obsessed world, thrown into jail as the hapless fall guy for a crime he didn't commit, thrown by his mother from a speeding car driven by murderous gangsters, and more.",
-    date: new Date(Date.now())
-  }
+    date: new Date(Date.now()),
+  },
+
+  { title: "Death By Darjeeling",
+      author: "Laura Childs",
+      synopsis:
+      "Ordinarily, Charleston\'s Indigo Tea Shop is an oasis of calm. But when tea shop owner, Theodosia Browning, caters the annual Lamplighter Tour of historic homes, one of the patrons turns up dead. Never mind that it\'s Hughes Barron, a slightly scurrilous real estate developer. Theodosia\'s reputation is suddenly on the line. Aided by her friends and fellow tea shop entrepreneurs, Theo sets about to unravel the mystery of the deadly Darjeeling and encounters a number of likely suspects. Tanner Joseph, the fiery environmentalist, held a grudge against the developer for his misuse of land. Timothy Neville, the octogenarian major domo for the Heritage Society, opposed Hughes Barron\'s election to the board. And Barron\'s unsavory partner might very well profit from a cleverly written buy-sell agreement!",
+  
+      date: new Date(Date.now())
+    },
 ];
 
 db.Book

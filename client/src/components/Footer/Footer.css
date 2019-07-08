@@ -3,6 +3,7 @@
     -webkit-box-shadow: 0 -14px 28px rgba(10, 227, 235, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     box-shadow: 0 -14px 28px rgba(12, 203, 236, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 18px;
     height: 50px;
     padding: 10px 0;
