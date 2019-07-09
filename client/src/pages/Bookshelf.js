@@ -16,6 +16,10 @@ export default class Bookshelf extends Component {
           <p>
             <Button variant="primary" href="/">Home</Button>
           </p>
+          <br></br>
+          <p>
+            <Button variant="primary" href="/">Home</Button>
+          </p>
         </Jumbotron>
       )
     }

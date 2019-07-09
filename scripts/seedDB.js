@@ -1,12 +1,18 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-const mongoJoin = require("mongo-join-query");
 
 // This file empties the Books collection and inserts the books below
 
+// mongoose.connect(
+//   process.env.MONGODB_URI ||
+//   "mongodb://localhost/reactreadinglist"
+
+// );
+
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/googlebooks"
+
 );
 
 const bookSeed = [
@@ -14,7 +20,7 @@ const bookSeed = [
     title: "Death By Darjeeling",
     author: "Laura Childs",
     synopsis:
-    "Ordinarily, Charleston\'s Indigo Tea Shop is an oasis of calm. But when tea shop owner, Theodosia Browning, caters the annual Lamplighter Tour of historic homes, one of the patrons turns up dead. Never mind that it\'s Hughes Barron, a slightly scurrilous real estate developer. Theodosia\'s reputation is suddenly on the line. Aided by her friends and fellow tea shop entrepreneurs, Theo sets about to unravel the mystery of the deadly Darjeeling and encounters a number of likely suspects. Tanner Joseph, the fiery environmentalist, held a grudge against the developer for his misuse of land. Timothy Neville, the octogenarian major domo for the Heritage Society, opposed Hughes Barron\'s election to the board. And Barron\'s unsavory partner might very well profit from a cleverly written buy-sell agreement!",
+      "Ordinarily, Charleston\'s Indigo Tea Shop is an oasis of calm. But when tea shop owner, Theodosia Browning, caters the annual Lamplighter Tour of historic homes, one of the patrons turns up dead. Never mind that it\'s Hughes Barron, a slightly scurrilous real estate developer. Theodosia\'s reputation is suddenly on the line. Aided by her friends and fellow tea shop entrepreneurs, Theo sets about to unravel the mystery of the deadly Darjeeling and encounters a number of likely suspects. Tanner Joseph, the fiery environmentalist, held a grudge against the developer for his misuse of land. Timothy Neville, the octogenarian major domo for the Heritage Society, opposed Hughes Barron\'s election to the board. And Barron\'s unsavory partner might very well profit from a cleverly written buy-sell agreement!",
 
     date: new Date(Date.now())
   },
@@ -29,14 +35,14 @@ const bookSeed = [
     title: "Chamomile Mourning",
     author: "Laura Childs",
     synopsis:
-    "Spoleto Festival ushers in a two week explosion of music, art, theater, and dance for Charleston. But during the Heritage Society\'s first-ever Poet\'s Tea, Roger Crispin, the head of Charleston\'s staid auction house Crispin & Weller, ends up a hapless performance art victim.",
+      "Spoleto Festival ushers in a two week explosion of music, art, theater, and dance for Charleston. But during the Heritage Society\'s first-ever Poet\'s Tea, Roger Crispin, the head of Charleston\'s staid auction house Crispin & Weller, ends up a hapless performance art victim.",
     date: new Date(Date.now())
   },
   {
     title: "Girl on a Train",
     author: "A J Waines",
     synopsis:
-    "A toddler is missing. Anna follows a mysterious trail of clues left by the anxious woman beside her on the train, who leapt suddenly to her death.",
+      "A toddler is missing. Anna follows a mysterious trail of clues left by the anxious woman beside her on the train, who leapt suddenly to her death.",
     date: new Date(Date.now())
   },
   {
@@ -124,13 +130,38 @@ const bookSeed = [
     date: new Date(Date.now()),
   },
 
-  { title: "Death By Darjeeling",
-      author: "Laura Childs",
-      synopsis:
-      "Ordinarily, Charleston\'s Indigo Tea Shop is an oasis of calm. But when tea shop owner, Theodosia Browning, caters the annual Lamplighter Tour of historic homes, one of the patrons turns up dead. Never mind that it\'s Hughes Barron, a slightly scurrilous real estate developer. Theodosia\'s reputation is suddenly on the line. Aided by her friends and fellow tea shop entrepreneurs, Theo sets about to unravel the mystery of the deadly Darjeeling and encounters a number of likely suspects. Tanner Joseph, the fiery environmentalist, held a grudge against the developer for his misuse of land. Timothy Neville, the octogenarian major domo for the Heritage Society, opposed Hughes Barron\'s election to the board. And Barron\'s unsavory partner might very well profit from a cleverly written buy-sell agreement!",
-  
-      date: new Date(Date.now())
-    },
+  {
+    title: "Dog Man A Tale of Two Kitties",
+    author: "Dave Pilkey",
+    ISBN: "978133820874",
+
+    date: new Date(Date.now())
+  },
+  {
+    title: "Dog Man",
+    author: "Dave Pilkey",
+    ISBN: "9780545581608",
+    date: new Date(Date.now())
+  },
+  {
+    title: "Dog Man Lord of the Fleas",
+    author: "Dave Pilkey",
+    ISBN: "9781338302493",
+    date: new Date(Date.now())
+  },
+  {
+    title: "Dog Man Brawl of the Wild",
+    author: "Dave Pilkey",
+    ISBN: "9781338346176",
+    date: new Date(Date.now())
+  },
+  {
+    title: "Dog Man Unleashed",
+    author: "Dave Pilkey",
+    ISBN: "9780545935203",
+    date: new Date(Date.now())
+  },
+
 ];
 
 db.Book

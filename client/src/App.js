@@ -10,13 +10,30 @@ import Footer from "./components/Footer/Footer"
 import axios from "axios"
 import Quagga from 'quagga';
 
-axios.get("// https://www.googleapis.com/books/v1/volumes?q=isbn:9781338208740")
-.then(res=>{
-  console.log(res)
+// axios.get("// https://www.googleapis.com/books/v1/volumes?q=isbn:9781338208740")
+// .then(res=>{
+//   console.log(res)
+// })
+// .catch(err=>{
+//   console.log("===================",err)
+
+// })
+
+// Dummy Url.
+const url = ("// https://www.googleapis.com/books/v1/volumes?q=isbn:9781338208740")
+
+// Axios Test.
+const axiosTest = axios.get
+
+// Axios Test Data.
+axiosTest(url).then(function(axiosTestResult) {
+  console.log('response.JSON:', {
+    message: 'Request received',
+    data: axiosTestResult.data
+  })
 })
-.catch(err=>{
-  console.log("===================",err)
-})
+
+
 
 class App extends Component {
   constructor(props) {

@@ -14,7 +14,8 @@ class Books extends Component {
     books: [],
     title: "",
     author: "",
-    synopsis: ""
+    synopsis: "",
+    ISBN:""
   };
 
   componentDidMount() {
