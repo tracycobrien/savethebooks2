@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"),{ useNewUrlParser: true };
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"),{ useNewUrlParser: true };
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/googlebooks';
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
