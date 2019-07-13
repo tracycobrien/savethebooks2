@@ -6,8 +6,7 @@ import NoMatch from "./pages/NoMatch";
 import Welcome from "./pages/Welcome";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer/Footer";
-import axios from "axios";
-import Quagga from 'quagga';
+
 import BookShelf from "./pages/Bookshelf"
 // import NoMatch from './pages/NoMatch'
 
@@ -51,51 +50,7 @@ class App extends Component {
     }
   }
 
-detected = (result) =>{
-  console.log(result)
-}
 
-  componentDidMount() {
-    const url = ("https://www.googleapis.com/books/v1/volumes?q=isbn:9780545581608")
-    axios.get(url).then(res => {
-      console.log(res.data.items)
-    })
-    Quagga.init({
-      inputStream: {
-        name: "Live",
-        type: "LiveStream",
-        target: document.querySelector('#play')    // Or '#yourElement' (optional)
-      },
-      decoder: {
-        readers: ["code_128_reader"]
-      }
-    }, function (err) {
-      if (err) {
-        console.log(err);
-        return
-      }
-      console.log("Initialization finished. Ready to start");
-      Quagga.start();
-    });
-    Quagga.onDetected((result)=>{this.detected(result)})
-  }
-
-  stopQuagga = () => {
-    if (this.state.quagga) {
-      this.setState({ quagga: false })
-      Quagga.stop()
-    } else if (this.state.quagga === false) {
-      this.setState({ quagga: true })
-      Quagga.start()
-    }
-  }
-
-  componentWillUnmount(){
-    Quagga.stop();
-    Quagga.offDetected(()=>{
-      console.log("stopped!")
-    });
-  }
 
   render() {
     return (
@@ -111,9 +66,7 @@ detected = (result) =>{
           <div className={`col-12 ${this.state.quagga === false ? "d-none" : null}`} id="play">
             <video muted autoplay></video>
           </div>
-          <button onClick={this.stopQuagga}>
-            {this.state.quagga ? "stop" : "start"}
-          </button>
+          
 
           <Footer />
         </div>
