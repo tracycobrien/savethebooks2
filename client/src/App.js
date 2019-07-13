@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail";
@@ -9,24 +8,25 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import Quagga from 'quagga';
-import NoMatch from './pages/NoMatch'
+import BookShelf from "./pages/Bookshelf"
+// import NoMatch from './pages/NoMatch'
 
 
-const App = () => (
-  <Router>
-    <div>
-      <Nav/>
-      <Switch>
-        <Route exact path="/" component={Search}/>
-        <Route exact path="/search" component={Search}/>
-        <Route exact path="/books" component={Books}/>
-        <Route component={NoMatch}/>
-      </Switch>
-    </div>
-  </Router>
-);
+// const App = () => (
+//   <Router>
+//     <div>
+//       <Nav/>
+//       <Switch>
+//         <Route exact path="/" component={Search}/>
+//         <Route exact path="/search" component={Search}/>
+//         <Route exact path="/books" component={Books}/>
+//         <Route component={NoMatch}/>
+//       </Switch>
+//     </div>
+//   </Router>
+// );
 
-export default App;
+// export default App;
 // // Dummy Url.
 // const url = ("// https://www.googleapis.com/books/v1/volumes?q=isbn:9781338208740")
 
@@ -52,6 +52,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    const url = ("https://www.googleapis.com/books/v1/volumes?q=isbn:9780545581608")
+    axios.get(url).then(res =>{
+      console.log(res.data.items)
+    })
     Quagga.init({
       inputStream: {
         name: "Live",
@@ -89,7 +93,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Welcome} />
             <Route exact path="/books" component={Books} />
-            <Route exact path="/bookshelf" component={Bookshelf} />
+            <Route exact path="/bookshelf" component={BookShelf} />
             <Route component={NoMatch} />
           </Switch>
           <div className={`col-12 ${this.state.quagga === false ?  "d-none" : null}`} id="play">
@@ -98,6 +102,9 @@ class App extends Component {
           <button onClick={this.stopQuagga}>
             {this.state.quagga ? "stop" : "start"}
           </button>
+          {Quagga.onDetected(data=>{
+            console.log(data)
+          })}
           <Footer />
         </div>
       </Router>

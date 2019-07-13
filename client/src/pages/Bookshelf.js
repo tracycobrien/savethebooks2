@@ -3,7 +3,7 @@ import { Jumbotron, Button } from 'react-bootstrap';
 // import { Col, Row, Container } from "../components/Grid";
 // import Jumbotron from "../components/Jumbotron";
 
-export default class Bookshelf extends Component {
+class Bookshelf extends Component {
     state = {}
 
     render() {
@@ -25,4 +25,5 @@ export default class Bookshelf extends Component {
     }
   }
   
-  
+
+export default Bookshelf
