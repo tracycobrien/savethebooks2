@@ -51,9 +51,13 @@ class App extends Component {
     }
   }
 
+detected = (result) =>{
+  console.log(result)
+}
+
   componentDidMount() {
     const url = ("https://www.googleapis.com/books/v1/volumes?q=isbn:9780545581608")
-    axios.get(url).then(res =>{
+    axios.get(url).then(res => {
       console.log(res.data.items)
     })
     Quagga.init({
@@ -73,13 +77,14 @@ class App extends Component {
       console.log("Initialization finished. Ready to start");
       Quagga.start();
     });
+    Quagga.onDetected((result)=>{this.detected(result)})
   }
 
   stopQuagga = () => {
-    if(this.state.quagga){
+    if (this.state.quagga) {
       this.setState({ quagga: false })
       Quagga.stop()
-    }else if(this.state.quagga === false){
+    } else if (this.state.quagga === false) {
       this.setState({ quagga: true })
       Quagga.start()
     }
@@ -96,15 +101,13 @@ class App extends Component {
             <Route exact path="/bookshelf" component={BookShelf} />
             <Route component={NoMatch} />
           </Switch>
-          <div className={`col-12 ${this.state.quagga === false ?  "d-none" : null}`} id="play">
+          <div className={`col-12 ${this.state.quagga === false ? "d-none" : null}`} id="play">
             <video muted autoplay></video>
           </div>
           <button onClick={this.stopQuagga}>
             {this.state.quagga ? "stop" : "start"}
           </button>
-          {Quagga.onDetected(data=>{
-            console.log(data)
-          })}
+
           <Footer />
         </div>
       </Router>
