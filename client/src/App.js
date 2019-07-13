@@ -90,6 +90,13 @@ detected = (result) =>{
     }
   }
 
+  componentWillUnmount(){
+    Quagga.stop();
+    Quagga.offDetected(()=>{
+      console.log("stopped!")
+    });
+  }
+
   render() {
     return (
       <Router>
