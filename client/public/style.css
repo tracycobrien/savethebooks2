@@ -15,6 +15,7 @@
 
 .background1{
     background-image: url(./law.jpeg);
+    image-resolution: 72dpi;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,6 +30,7 @@
 
 .background2{
     background-image: url(./openbook.jpeg);
+    image-resolution: 72dpi;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

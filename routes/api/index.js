@@ -3,7 +3,7 @@ const bookRoutes = require("./books");
 // const bookshelfRoutes = require('./bookshelf');
 
 // Book routes
-router.use("/books", bookRoutes);
+router.use("/api/books", bookRoutes);
 // router.use('/bookshelf', bookshelfRoutes);
 
 

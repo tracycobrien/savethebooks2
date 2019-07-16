@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
-import Detail from "./pages/Detail";
+// import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Welcome from "./pages/Welcome";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer/Footer";
-
 import BookShelf from "./pages/Bookshelf"
 // import NoMatch from './pages/NoMatch'
 
@@ -66,7 +65,7 @@ class App extends Component {
           <div className={`col-12 ${this.state.quagga === false ? "d-none" : null}`} id="play">
             <video muted autoplay></video>
           </div>
-          
+
 
           <Footer />
         </div>

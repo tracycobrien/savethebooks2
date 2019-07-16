@@ -15,7 +15,6 @@ class Books extends Component {
     title: "",
     author: "",
     synopsis: "",
-    ISBN:""
   };
 
   componentDidMount() {
@@ -63,7 +62,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron className={"background2"}>
-              <h1>Add Books to My Wish List</h1>
+              <h1>Add Books to Brooks' Wish List</h1>
             </Jumbotron>
             <form>
               <Input
@@ -94,7 +93,7 @@ class Books extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron className={"background1"}>
-              <h1>Books On My Wish List</h1>
+              <h1>Books On Brooks' Wish List</h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>

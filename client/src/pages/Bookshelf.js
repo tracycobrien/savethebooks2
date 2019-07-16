@@ -12,7 +12,7 @@ class Bookshelf extends Component {
 
   detected = (result) => {
     console.log(result.codeResult.code)
-    const url = (`https://www.googleapis.com/books/v1/volumes?key=AIzaSyCzt_wRd5OmMNI45huGUVaz9sVqZ0-DIUE&q=isbn:${9780062871855}`)
+    const url = (`https://www.googleapis.com/books/v1/volumes?key=&q=isbn:${result.codeResult.code}`)
     axios.get(url).then(res => {
       this.setState({bookData: res.data.items})
     })
@@ -69,7 +69,7 @@ class Bookshelf extends Component {
         <Jumbotron className={"background3"}>
           <h1 className={"outline-text"}>Please Scan a Book!</h1>
           <p>
-            {this.state.bookData ? "Your Scaned Book" : null}
+            {this.state.bookData ? "Your Scanned Book" : null}
           </p>
           {this.state.bookData ? <img src={this.state.bookData[0].volumeInfo.imageLinks.thumbnail}/> : null}
           <br></br>
