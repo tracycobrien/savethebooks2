@@ -12,7 +12,9 @@ class Bookshelf extends Component {
 
   detected = (result) => {
     console.log(result.codeResult.code)
-    const url = (`https://www.googleapis.com/books/v1/volumes?key=AIzaSyBeth1u6CHkSrc6U-ZgJrOUQ5YAiDKp-ko&q=isbn:${result.codeResult.code}`)
+    // let key = "AIzaSyBeth1u6CHkSrc6U-ZgJrOUQ5YAiDKp-ko";
+    let key = process.env.KEY;
+    const url = (`https://www.googleapis.com/books/v1/volumes?key${key}&q=isbn:${result.codeResult.code}`)
 	    axios.get(url).then(res => {
       this.setState({ bookData: res.data.items })
     })
