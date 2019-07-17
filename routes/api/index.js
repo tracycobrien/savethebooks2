@@ -5,7 +5,9 @@ const bookRoutes = require("./books");
 // Book routes
 router.use("/api/books", bookRoutes);
 // router.use('/bookshelf', bookshelfRoutes);
-
+router.use('/*', (request, response) => {
+	response.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 
 
