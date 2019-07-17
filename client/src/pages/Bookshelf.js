@@ -24,6 +24,7 @@ class Bookshelf extends Component {
   }
 
   componentDidMount() {
+    console.log('tada')
     const url = ("https://www.googleapis.com/books/v1/volumes?q=isbn:9780545581608")
     axios.get(url).then(res => {
       console.log(res.data.items)

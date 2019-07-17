@@ -14,7 +14,6 @@ app.use(express.json());
 // Add routes, both API and view
 app.use(routes);
 if (process.env.NODE_ENV === 'production') {
-	console.log('producion');
 	app.use(express.static('client/build'));
 }
 
