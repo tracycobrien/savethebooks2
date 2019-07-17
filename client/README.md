@@ -1,7 +1,7 @@
 ## Brooks' Reading App
 
 ## Book Wish List and Saved Reading List Application using MongoDB, Quagga, Express, React, & Node
-MERN-Library is a React-based Google Books Search application. It allows you to search the Google Books API for books that you might like to read; displaying for you the book information including an image of the book, title, authors, description, published date, and number of pages. Furthermore you are then able to save the books you have read to your 'Bookshelf' to for your teachers to reference later when they are looking for books for you to read. The server for the application is supported by Node.js and Express and a MongoDB database is used to store your 'Bookshelf' which is queried via Mongoose.
+MERN-Library is a React-based Google Books Search application. It allows you to search the Google Books API for books that Brooks might like to read; displaying for you the book information including an image of the book, title, authors, description, published date, and number of pages. Furthermore you are then able to see the books he has for his teachers to reference later when they are looking for books for him to read. The server for the application is supported by Node.js and Express and a MongoDB database is used to store your 'Bookshelf' which is queried via Mongoose.
 
 
 ##Getting Started
@@ -44,16 +44,12 @@ As per the package.json... with it being in dev mode (which is checks for), it w
 
 Deployment
 * Deployed Site
-- [Heroku](#heroku)
-I personally have this application deployed using Heroku, with mLab serving serving as the remote MongoDB database. The steps to deploy in this manner are as follows:
-Initialize your own copy of the project as a Git Repo if you have not already done so using:
-git init
-Create a heroku app on the heroku website, this is where you will be pushing the project to for deployment. Then add the mLab Addon for the MongoDB Database.
-Add and commit your changes on your own device before pushing to Heroku (the first command will be provided for you by Heroku):
-heroku git:remote -v <name of your heroku application>
-Then:
-git push heroku master
-Heroku automatically sets the NODE_ENV to Production and will thus run the build commands within the package.json. Additionally, in order to be able to utilize the Google Books API, you will have to provide your Heroku Application with your API key for the site. This can be done in your application settings on Heroku.
+- [Heroku](https://savethebook.herokuapp.com/)
+
+##Pictures
+![welcome](welcome.jpeg)
+![wish](wish.jpeg)
+![book](book.jpeg)
 
 
 

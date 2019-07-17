@@ -12,8 +12,8 @@ export default class Welcome extends Component {
       <Jumbotron>
         <h1>Please Enter!</h1>
         <p>
-          This is an app that allow you to access a list of books I have already read! I also have a wish 
-          list of books I would love to own. Thank you for visiting. 
+          This is an app that allow you to access a list of books Brooks' has read! I also have a wish 
+          list of books he would love to own. Thank you for visiting. 
         </p>
         <p>
         
