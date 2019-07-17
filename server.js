@@ -12,15 +12,14 @@ app.use(express.json());
 // Serve up static assets (usually on heroku)
 // app.use(express.static("client/build"));
 // Add routes, both API and view
-app.use(routes);
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
-// app.get('*', (request, response) => {
-// 	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
-
+app.get('/*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+app.use(routes);
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"),{ useNewUrlParser: true };
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/googlebooks';
