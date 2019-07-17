@@ -12,8 +12,8 @@ class Bookshelf extends Component {
 
   detected = (result) => {
     console.log(result.codeResult.code)
-    const url = (`https://www.googleapis.com/books/v1/process.env.DATABASE_URL=isbn:${result.codeResult.code}')
-    axios.get(url).then(res => {
+    const url = (`https://www.googleapis.com/books/v1/volumes?key=AIzaSyBeth1u6CHkSrc6U-ZgJrOUQ5YAiDKp-ko&q=isbn:${result.codeResult.code}`)
+	    axios.get(url).then(res => {
       this.setState({ bookData: res.data.items })
     })
       .catch(err => {
@@ -73,41 +73,7 @@ class Bookshelf extends Component {
           </p>
           {this.state.bookData ? <img src={this.state.bookData[0].volumeInfo.imageLinks.thumbnail} /> : null}
           <br></br>
-  //         <p>
-  //           constructor(props) {
-  //             super(props);
-  //           this.state = {
-  //             display: true
-  //         }
-  //         this.toggleDisplay = this.toggleDisplay.bind(this);
-  //       }
-  // toggleDisplay() {
-  //             toggleDisplay() {
-  //               this.setState({
-  //                 display: !this.state.display
-  //               });
-  //             }
-  //  render() {
-  //   // change code below this line
-  //   if ( this.state.display ) {
-
-  //   return (
-  //      <div>
-  //             <button onClick={this.state.bookData[0].volumeInfo.imageLinks.thumbnail / books / v1 / volumes ? q = isbn : 9780545581608}>Toggle Display</button>
-  //             console.log (Read!)
-  //             <h1>Read!</h1>
-
-  //           </div>
-  //           );
-  // { else {}
-  //           return (
-  //      <div>
-  //             <button onClick={this.state.bookData[0].volumeInfo.imageLinks.thumbnail / books / v1 / volumes ? q = isbn : 9780062110787}>Toggle Display</button>
-  //             <h2>Have not Read</h2>
-  //           </div>
-  //           );
-  //         }
-  //        </p>
+   
           <br></br>
           <p>
             <Button variant="primary" href="/">Home</Button>
