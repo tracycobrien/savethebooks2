@@ -46,16 +46,7 @@ Deployment
 * Deployed Site
 - [Heroku](https://savethebook.herokuapp.com/)
 
-##Pictures
-![welcome](welcome.jpeg)
-![wish](wish.jpeg)
-![book](book.jpeg)
 
-
-
-Author Tracy O'Brien
-Acknowledgments
-* Many thanks to my instructor & TAs, as well as fellow students who helped me through this process!
 
 
 
