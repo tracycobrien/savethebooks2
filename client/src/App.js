@@ -39,8 +39,6 @@ import BookShelf from "./pages/Bookshelf"
 //   })
 // })
 
-
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -62,9 +60,9 @@ class App extends Component {
             <Route exact path="/bookshelf" component={BookShelf} />
             <Route component={NoMatch} />
           </Switch>
-          <div className={`col-12 ${this.state.quagga === false ? "d-none" : null}`} id="play">
+          {/* <div className={`col-12 ${this.state.quagga === false ? "d-none" : null}`} id="play">
             <video muted autoplay></video>
-          </div>
+          </div> */}
 
 
           <Footer />

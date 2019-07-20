@@ -92,7 +92,7 @@ class Books extends Component {
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron className={"background1"}>
+            <Jumbotron className={"background1"} style={{"height" : "600px"}}>
               <h1>Books On Brooks' Wish List</h1>
             </Jumbotron>
             {this.state.books.length ? (

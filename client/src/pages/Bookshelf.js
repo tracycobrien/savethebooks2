@@ -82,6 +82,9 @@ class Bookshelf extends Component {
             <Button variant="primary" href="/">Home</Button>
           </p>
         </Jumbotron>
+        <div className={`col-12 ${this.state.quagga === false ? "d-none" : null}`} id="play">
+            <video muted autoplay></video>
+          </div>
         <button onClick={this.stopQuagga}>
           {this.state.quagga ? "stop" : "start"}
         </button>
